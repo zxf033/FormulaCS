@@ -49,9 +49,6 @@ namespace FormulaCS.Evaluator
                 return 0;
             }
 
-            var parsedFormula = new VariableParser(formula, Variables);
-            formula = parsedFormula.Parse();
-
             var inputStream = new AntlrInputStream(formula);
             var lexer = new FormulaLexer(inputStream);
             var tokens = new CommonTokenStream(lexer);
